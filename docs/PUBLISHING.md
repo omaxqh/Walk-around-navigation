@@ -12,7 +12,7 @@ git check-ignore .env cache.db .runtime/
 
 - 仓库中没有 `.env`、SQLite 数据库、日志和 `__pycache__`；
 - 没有原作者服务器地址或真实 API Key；
-- `shortcut/漫步导航 分享版.shortcut` 是未配置个人服务器的 Apple 签名分享文件；
+- `shortcut/RouteSnap-Share.shortcut` 是未配置个人服务器的 Apple 签名分享文件；
 - README 的快捷指令、部署与故障排查链接都能打开；
 - GitHub Actions 测试通过。
 
@@ -38,7 +38,7 @@ git push -u origin main
 建议创建 `v1.0.0` Release，并附上：
 
 - 仓库源码压缩包；
-- `shortcut/漫步导航 分享版.shortcut`；
+- `shortcut/RouteSnap-Share.shortcut`；
 - `shortcut/SHA256SUMS`；
 - 指向 `docs/QUICKSTART.md` 的安装说明。
 

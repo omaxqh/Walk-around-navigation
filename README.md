@@ -58,7 +58,7 @@ docker compose up -d --build
 curl https://api.example.com/health
 ```
 
-`/health` 返回 `"configured": true` 后，安装 [shortcut/漫步导航 分享版.shortcut](shortcut/%E6%BC%AB%E6%AD%A5%E5%AF%BC%E8%88%AA%20%E5%88%86%E4%BA%AB%E7%89%88.shortcut)。导入时把主请求和重试请求都填写为同一个地址与令牌：
+`/health` 返回 `"configured": true` 后，安装 [shortcut/RouteSnap-Share.shortcut](shortcut/RouteSnap-Share.shortcut)。文件内部显示名称仍是“漫步导航 分享版”。导入时把主请求和重试请求都填写为同一个地址与令牌：
 
 - 完整地址：`https://api.example.com/parse`
 - Authorization：`Bearer 你的ROUTESNAP_ACCESS_TOKEN`

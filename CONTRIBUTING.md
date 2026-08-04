@@ -31,5 +31,5 @@ python -m unittest -v test_mobile_amap_only.py
 
 1. 在 Apple“快捷指令”App中复制一个工作副本。
 2. 两个 `/parse` 请求必须同步修改。
-3. 导出时选择“任何人”，保存到 `shortcut/漫步导航 分享版.shortcut`。
+3. 导出时选择“任何人”，保存到 `shortcut/RouteSnap-Share.shortcut`；快捷指令内部名称保持“漫步导航 分享版”。
 4. 导出前确认 URL 和 Authorization 都是占位值，不能包含维护者真实服务信息。

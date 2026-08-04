@@ -13,7 +13,7 @@ required=(
   .env.example
   compose.yaml
   Dockerfile
-  "shortcut/漫步导航 分享版.shortcut"
+  shortcut/RouteSnap-Share.shortcut
   shortcut/SHA256SUMS
 )
 
@@ -34,11 +34,11 @@ if grep -RInE --exclude='*.shortcut' --exclude-dir='.git' '49\.232\.142\.84|sk-[
   exit 1
 fi
 
-shortcut_magic="$(od -An -tx1 -N4 'shortcut/漫步导航 分享版.shortcut' | tr -d ' \n')"
+shortcut_magic="$(od -An -tx1 -N4 shortcut/RouteSnap-Share.shortcut | tr -d ' \n')"
 [[ "$shortcut_magic" == "41454131" ]] || { echo "快捷指令不是 Apple 签名导出格式" >&2; exit 1; }
 
 expected_shortcut_hash="$(awk '{print $1}' shortcut/SHA256SUMS)"
-actual_shortcut_hash="$(python3 -c 'import hashlib; print(hashlib.sha256(open("shortcut/漫步导航 分享版.shortcut", "rb").read()).hexdigest())')"
+actual_shortcut_hash="$(python3 -c 'import hashlib; print(hashlib.sha256(open("shortcut/RouteSnap-Share.shortcut", "rb").read()).hexdigest())')"
 [[ "$actual_shortcut_hash" == "$expected_shortcut_hash" ]] || { echo "快捷指令校验和不匹配" >&2; exit 1; }
 
 python3 -c 'from pathlib import Path; [compile(path.read_text(encoding="utf-8"), str(path), "exec") for path in map(Path, ("app.py", "poi_disambiguate.py", "emoji_learner.py"))]'

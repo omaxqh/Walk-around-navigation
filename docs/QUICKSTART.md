@@ -104,7 +104,7 @@ curl https://api.example.com/health
 
 ## 6. 安装快捷指令
 
-下载并打开 `shortcut/漫步导航 分享版.shortcut`，然后按 [快捷指令配置说明](SHORTCUT_SETUP.md)填写两组相同配置。
+下载并打开 `shortcut/RouteSnap-Share.shortcut`，然后按 [快捷指令配置说明](SHORTCUT_SETUP.md)填写两组相同配置。
 
 ## 更新
 

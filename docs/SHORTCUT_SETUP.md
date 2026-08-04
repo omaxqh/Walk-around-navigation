@@ -8,7 +8,7 @@
 
 ## 安装
 
-1. 在 GitHub 仓库打开 `shortcut/漫步导航 分享版.shortcut` 并下载文件。
+1. 在 GitHub 仓库打开 `shortcut/RouteSnap-Share.shortcut` 并下载文件；导入后显示名称为“漫步导航 分享版”。
 2. 在 iPhone“文件”App中点开该文件。
 3. 系统显示快捷指令内容后选择添加。
 
