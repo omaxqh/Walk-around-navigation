@@ -24,7 +24,7 @@ done
 [[ ! -e .env ]] || { echo "发布目录不能包含 .env" >&2; exit 1; }
 [[ ! -e cache.db ]] || { echo "发布目录不能包含 cache.db" >&2; exit 1; }
 
-if find . -path './.git' -prune -o -type d -name __pycache__ -print | grep -q .; then
+if find . \( -path './.git' -o -path './.venv' -o -path './venv' \) -prune -o -type d -name __pycache__ -print | grep -q .; then
   echo "发布目录包含 __pycache__" >&2
   exit 1
 fi
