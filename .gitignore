@@ -1,0 +1,14 @@
+.env
+.runtime/
+cache.db
+*.db-wal
+*.db-shm
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.bak
+.DS_Store
+.idea/
+.vscode/
+dist/

@@ -1,0 +1,24 @@
+[Unit]
+Description=RouteSnap Share Edition API
+After=network.target
+
+[Service]
+Type=simple
+User=routesnap
+Group=routesnap
+WorkingDirectory=/opt/routesnap-share
+EnvironmentFile=/etc/routesnap-share.env
+Environment=ROUTESNAP_DATA_DIR=/var/lib/routesnap-share
+ExecStart=/opt/routesnap-share/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:5001 --access-logfile - --error-logfile - app:app
+Restart=always
+RestartSec=3
+StateDirectory=routesnap-share
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/routesnap-share
+
+[Install]
+WantedBy=multi-user.target

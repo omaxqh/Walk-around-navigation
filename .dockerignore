@@ -1,0 +1,13 @@
+.git
+.github
+.env
+.runtime
+__pycache__
+*.pyc
+*.db
+*.db-wal
+*.db-shm
+dist
+docs
+shortcut
+test_*.py

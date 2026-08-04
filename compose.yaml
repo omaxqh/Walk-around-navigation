@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      ROUTESNAP_DATA_DIR: /data
+    expose:
+      - "5001"
+    volumes:
+      - routesnap_data:/data
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      ROUTESNAP_DOMAIN: ${ROUTESNAP_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./deploy/Caddyfile.docker:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  routesnap_data:
+  caddy_data:
+  caddy_config:

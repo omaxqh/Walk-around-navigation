@@ -1,0 +1,4 @@
+{$ROUTESNAP_DOMAIN} {
+    reverse_proxy api:5001
+    encode zstd gzip
+}
