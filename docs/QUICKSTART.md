@@ -26,8 +26,8 @@ docker compose version
 ## 3. 下载并填写配置
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd routesnap
+git clone https://github.com/omaxqh/Walk-around-navigation.git
+cd Walk-around-navigation
 cp .env.example .env
 openssl rand -hex 32
 nano .env

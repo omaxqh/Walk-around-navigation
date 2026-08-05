@@ -32,8 +32,8 @@ flowchart LR
 ## 最快部署：Docker Compose
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd routesnap
+git clone https://github.com/omaxqh/Walk-around-navigation.git
+cd Walk-around-navigation
 cp .env.example .env
 openssl rand -hex 32
 ```

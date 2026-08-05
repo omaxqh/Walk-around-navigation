@@ -5,8 +5,8 @@
 ## 1. 安装应用
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd routesnap
+git clone https://github.com/omaxqh/Walk-around-navigation.git
+cd Walk-around-navigation
 sudo ./scripts/install-ubuntu.sh
 ```
 

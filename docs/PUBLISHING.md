@@ -21,7 +21,7 @@ git check-ignore .env cache.db .runtime/
 在 GitHub 创建一个空仓库，不要勾选自动生成 README、`.gitignore` 或许可证，然后在本地执行：
 
 ```bash
-git remote add origin git@github.com:YOUR_NAME/YOUR_REPOSITORY.git
+git remote add origin https://github.com/omaxqh/Walk-around-navigation.git
 git push -u origin main
 ```
 
